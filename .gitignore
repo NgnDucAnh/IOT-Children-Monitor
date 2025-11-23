@@ -1,0 +1,30 @@
+# Thư mục môi trường ảo (Virtual Environment)
+# Thường chứa các thư viện đã cài đặt và không nên push lên GitHub
+venv/
+*.venv
+
+# File cấu hình môi trường/bí mật
+# Chứa các khóa API, mật khẩu database,... nên KHÔNG BAO GIỜ được push
+.env
+
+# File cache của Python/IDE
+__pycache__/
+*.pyc
+.vscode/
+
+# Thư mục đầu ra/tạm thời (Output/Test/Uploads)
+# Chứa kết quả chạy chương trình, ảnh test, hoặc file người dùng upload
+image_test/
+output_test/
+uploads/
+results.txt
+
+# File mô hình máy học (Machine Learning Model)
+# Các file mô hình lớn nên được lưu trữ ngoài Git (ví dụ: Git LFS)
+# Tránh push trực tiếp nếu chúng quá lớn.
+best_v2.pt
+
+# Các file IDE (ví dụ: VS Code, nếu có)
+.idea/
+*.swp
+*~
