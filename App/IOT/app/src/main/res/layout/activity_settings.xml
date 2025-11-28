@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cài đặt thiết bị"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- THÊM SCROLLVIEW ĐỂ CUỘN ĐƯỢC NẾU DANH SÁCH DÀI -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleSettings">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#212121"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="4dp">
+
+            <!-- PHẦN CHỌN THỜI GIAN (MỚI THÊM) -->
+            <TextView
+                android:text="Lịch trình hoạt động"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- Dòng chọn giờ Bắt đầu -->
+            <LinearLayout
+                android:id="@+id/layoutStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thời gian bắt đầu"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20:00"
+                    android:textStyle="bold"
+                    android:textColor="#03DAC5"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- Dòng chọn giờ Kết thúc -->
+            <LinearLayout
+                android:id="@+id/layoutEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thời gian kết thúc"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22:00"
+                    android:textStyle="bold"
+                    android:textColor="#03DAC5"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="#444444" />
+
+            <!-- CÁC SWITCH CŨ CỦA BẠN -->
+            <Switch
+                android:id="@+id/light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"
+                android:text="Đèn chung"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:checked="true" />
+
+            <Switch
+                android:id="@+id/lightSleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"
+                android:text="Đèn khi ngủ"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:checked="true" />
+
+            <Switch
+                android:id="@+id/lightPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"
+                android:text="Đèn khi dùng điên thoại"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:checked="true" />
+            <Switch
+                android:id="@+id/lightLaptop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"
+                android:text="Đèn khi dùng laptop"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:checked="true" />
+            <Switch
+                android:id="@+id/lightNoPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"
+                android:text="Đèn khi không có người"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:checked="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="#444444" />
+
+            <Switch
+                android:id="@+id/alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Còi chung"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/alarmSleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Còi khi ngủ"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/alarmPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Còi khi dùng điện thoại"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/alarmLaptop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Còi khi dùng laptop"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/alarmNoPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Còi khi không có người"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

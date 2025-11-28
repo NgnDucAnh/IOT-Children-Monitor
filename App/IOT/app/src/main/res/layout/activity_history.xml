@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lịch sử hoạt động"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleHistory">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow android:background="#E64A19">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="14dp"
+                        android:text="Thời gian"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#FF7043"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="14dp"
+                        android:text="Hành động"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#FF7043"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="14dp"
+                        android:text="Xem ảnh"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+                </TableRow>
+
+                <TableRow android:background="#1E1E1E">
+                    <TextView
+                        android:padding="14dp"
+                        android:text="2025-11-20\n15:00:28"
+                        android:textColor="#E0E0E0"
+                        android:textSize="13sp" />
+
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#333333"/>
+
+                    <TextView
+                        android:padding="14dp"
+                        android:text="using_computer"
+                        android:textColor="#E0E0E0"
+                        android:textSize="13sp" />
+
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#333333"/>
+
+                    <TextView
+                        android:padding="14dp"
+                        android:text="img...26.jpg"
+                        android:textColor="#4FC3F7"
+                        android:textStyle="italic"
+                        android:textSize="13sp" />
+                </TableRow>
+
+                <View android:layout_height="1dp" android:background="#333333" />
+
+                <TableRow android:background="#1E1E1E">
+                    <TextView
+                        android:padding="14dp"
+                        android:text="2025-11-20\n15:00:21"
+                        android:textColor="#E0E0E0"
+                        android:textSize="13sp" />
+
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#333333"/>
+
+                    <TextView
+                        android:padding="14dp"
+                        android:text="sleeping"
+                        android:textColor="#E0E0E0"
+                        android:textSize="13sp" />
+
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#333333"/>
+
+                    <TextView
+                        android:padding="14dp"
+                        android:text="img...14.jpg"
+                        android:textColor="#4FC3F7"
+                        android:textStyle="italic"
+                        android:textSize="13sp" />
+                </TableRow>
+
+                <View android:layout_height="1dp" android:background="#333333" />
+
+            </TableLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
